@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    (function poll() {
+        setTimeout(function() {
+            $.ajax({
+                url: "/server/api/function",
+                type: "GET",
+                success: function(data) {
+                    if (data) {
+                        window.location.replace("/dashboard");
+                    }
+                },
+                dataType: "json",
+                complete: poll(),
+            })
+        }, 5000);
+    })();
+</script>

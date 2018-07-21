@@ -1,0 +1,34 @@
+<!-- Dropthemizer JSON-LD for general theme SEO -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://{{shop.domain}}",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://{{shop.domain}}"" + "/search?q={query}",
+            "query-input": "required name=query"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ shop.name }}",
+        "url": "https://{{ shop.domain }}",
+        "description": "{{ page_description }}",
+        "telephone": "{{ shop.phone }}",
+        "logo": "https://cdn.shopify.com/image/stuff/more-stuff",
+        "image": "https://cdn.shopify.com/image/stuff/more-stuff",
+        "sameAs": ["https://www.facebook.com/CTRLActive","https://instagram.com/onlinewarehouse.ca","https://twitter.com/TbreezyF","https://www.pinterest.com/rosenelli_p","https://plus.google.com/eddy"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{shop.address.street}}",
+            "addressLocality": "{{shop.address.city}}",
+            "addressRegion": "{{shop.address.province}}",
+            "postalCode": "{{shop.address.zip}}",
+            "addressCountry": "{{shop.address.country}}"
+        }
+    }
+</script>
